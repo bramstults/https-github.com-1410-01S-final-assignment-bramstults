@@ -47,6 +47,7 @@ class bankAccount{
     {
         if(moneyInput > balance){ //refuse withdrawal
             return false;
+            System.out.println("Insufficient funds");
         }
         else {
             balance = balance - moneyInput;
@@ -64,6 +65,7 @@ public class FinBankModel { //a "custom" type, like a "String"
     {
         if(moneyInput > digiBalance){ //refuse withdrawal
             return false;
+            System.out.println("Insufficient funds");
         }
         else {
             digiBalance = digiBalance - moneyInput;
@@ -93,6 +95,7 @@ public static void main(String[] args){
     //TODO
 
     // bankAccount b = new bankAccount();
+    
     FinBank f = new FinBank(10);
 
     f.accounts.get(2).deposit(2000.00);
